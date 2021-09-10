@@ -1,4 +1,23 @@
-																	 
+#include <iostream>
+#include <math.h>
+#include "data.h"
+#include <string>
+#include <iomanip>
+#include <conio.h>
+#include <unordered_map>
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <set>
+#include <map>
+#include<utility>
+#include<Windows.h>
+#include<shellapi.h>
+
+
+
+
+
 //wentworth------------------------------------------
  std::string schoolname_wentworth = "Wentworth Insitute of Technology";
 	//happiness

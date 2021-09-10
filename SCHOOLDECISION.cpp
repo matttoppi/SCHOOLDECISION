@@ -1,21 +1,7 @@
 // SCHOOLDECISION.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
-#include <math.h>
 #include "data.h"
-#include <string>
-#include <iomanip>
-#include <conio.h>
-#include <unordered_map>
-#include <vector>
-#include <algorithm>
-#include <functional>
-#include <set>
-#include <map>
-#include<utility>
-#include<Windows.h>
-#include<shellapi.h>
 
 
 void processing(int menuChoice);
