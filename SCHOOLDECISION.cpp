@@ -3,7 +3,7 @@
 
 #include "data.h"
 
-
+//functions prototyping
 void processing(int menuChoice);
 float cost(float creditCost, float livingCostMonth);
 float safety(float preSafeValue);
@@ -29,6 +29,7 @@ int main()
 
 float cost(float creditCost, float livingCostMonth)
 {
+	//calculation of the cost value 
 	float semesterTotal = (livingCostMonth * 6.0) + (creditCost * 15.0);
 	float value = abs((semesterTotal / 3600.0) - 10.0);
 	return value;
@@ -36,12 +37,14 @@ float cost(float creditCost, float livingCostMonth)
 
 float safety(float preSafeValue)
 {
+	//calculation of the safety value
 	float value = (preSafeValue * 2.0) - 10.0;
 	return value;
 }
 
 float pRank(float pRank, float onlineSentiment)
 {
+	//calculation of the prestige rank value
 	float rankValue = (2000.0 - pRank) / 200.0;
 	float onlineSentimentValue = (onlineSentiment * 2.0) - 10.0;
 	float value = (rankValue + onlineSentimentValue) / 2.0;
@@ -50,6 +53,7 @@ float pRank(float pRank, float onlineSentiment)
 
 float cGrowth(float milesFromCity, float nonCapPenalty, float prestigeValue)
 {
+	//calculation of the career growth value
 	float value = ((milesFromCity - 35.0) / -3.5) + prestigeValue - nonCapPenalty;
 
 	if (value > 10)
@@ -62,6 +66,7 @@ float cGrowth(float milesFromCity, float nonCapPenalty, float prestigeValue)
 
 float acceptance(float gpa, float preReqValue, float gradePreReq)
 {
+	//calculation of the acceptance value
 	float x = ((gpa - 3.25)/ -0.15);
 	float value = x + preReqValue + gradePreReq;
 
@@ -73,6 +78,7 @@ float acceptance(float gpa, float preReqValue, float gradePreReq)
 
 float car(float easeOfLocation, float onCampusPark, float costPark)
 {
+	//calculation of the car value
 	float pCostValue = ((costPark - 2000.0) / -200.0);
 	float value = (pCostValue + easeOfLocation + onCampusPark) / 3;
 	return value;
@@ -83,6 +89,7 @@ float car(float easeOfLocation, float onCampusPark, float costPark)
 float weightedCalculation(std::string school_name, float fhappinessValue, float fCost_Value, float fSafety_Value,
 	float fpRank_Value, float fcGrwoth_Value, float facceptance_Value, float fcar_Value)
 {
+	//weighted calculation
 	float happinessV, costV, safetyV, prankV, cgrowthV, acceptanceV, carV;
 
 	happinessV = fhappinessValue * (.25);
@@ -103,6 +110,7 @@ float weightedCalculation(std::string school_name, float fhappinessValue, float 
 void printResults(std::string& school_name, float& fhappinessValue, float& fCost_Value, float& fSafety_Value,
 	float& fpRank_Value, float& fcGrwoth_Value, float& facceptance_Value, float& fcar_Value)
 {
+	//printing of the various values
 	std::cout << std::fixed;
 	std::cout << std::setprecision(2) << std::endl;
 	std::cout << school_name<< ":\n\n";
@@ -119,7 +127,7 @@ void printResults(std::string& school_name, float& fhappinessValue, float& fCost
 
 void processing(int menuChoice)
 {
-
+	//call to functions for each school
 	//Wentworth
 	float wentworth_Cost_Value = cost(creditcost_wentworth, livingCost_wentworth);
 	float wentworth_Safety_Value = safety(safety_wentworth);
@@ -211,7 +219,7 @@ void processing(int menuChoice)
 
 
 
-
+	//main menu printing
 	if (menuChoice == 1)			//View algorithm Mechanics
 	{
 		ShellExecute(NULL, NULL, L"https://www.google.com/", NULL, NULL, SW_SHOWNORMAL);
@@ -350,7 +358,7 @@ void processing(int menuChoice)
 		}
 		
 
-
+		 //allows user to return to main menu
 		char anotherOption;
 		std::cout << "\n\nWould you like to select another main menu option? (Y or N)";
 		std::cin >> anotherOption;
@@ -367,7 +375,7 @@ void processing(int menuChoice)
 	}
 	else if (menuChoice == 3)	// View final scoring
 	{
-		
+		//print final scoring
 
 		float suffolk_FINAL = weightedCalculation(schoolname_suffolk, happiness_suffolk, suffolk_Cost_Value, suffolk_Safety_Value, suffolk_pRank_Value,
 			suffolk_cGrowth_Value, suffolk_Acceptance_Value, suffolk_Car_Value);
@@ -403,8 +411,8 @@ void processing(int menuChoice)
 			FGCU_cGrowth_Value, FGCU_Acceptance_Value, FGCU_Car_Value);
 
 
+		//creates a map for the scores to be sorted from worst to best
 		std::multimap<float, std::string, std::greater<float>> sorted_map;
-
 
 		sorted_map.insert(std::make_pair(suffolk_FINAL, schoolname_suffolk));
 		sorted_map.insert(std::make_pair(umassBoston_FINAL, schoolname_umassBoston));
@@ -426,7 +434,8 @@ void processing(int menuChoice)
 		std::cout << std::setw(75) << "---------------------------------------------------\n";
 		
 
-
+			  
+		//printing of the scores in order
 		int i = 0;
 		for (auto const& entry :sorted_map)
 		{
@@ -452,6 +461,7 @@ void processing(int menuChoice)
 	}
 	else							//invalid number try again
 	{
+	//wrong input 
 		std::cout << "\n\nYou entered an invalid number please try again\n\n\n\n\n\n\n\n";
 			main();
 	}
