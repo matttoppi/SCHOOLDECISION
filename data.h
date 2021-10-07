@@ -1,6 +1,5 @@
 #include <iostream>
 #include <math.h>
-#include "data.h"
 #include <string>
 #include <iomanip>
 #include <conio.h>
@@ -228,30 +227,30 @@ float campusPark_saintAnselm = 7.5;
 float costPark_saintAnselm = 150.0;
 
 
-//Umass Ahmherst------------------------------------------
-std::string schoolname_umassAhmherst = "University of Massachusetts Ahmherst";
+//Umass Amherst------------------------------------------
+std::string schoolname_umassAmherst = "University of Massachusetts Amherst";
 	//happiness
-float happiness_umassAhmherst = 5.4;
+float happiness_umassAmherst = 5.4;
 	//cost
-float creditcost_umassAhmherst = 405.0;
-float livingCost_umassAhmherst = 1050.0;
+float creditcost_umassAmherst = 405.0;
+float livingCost_umassAmherst = 1050.0;
 	//safety
-float safety_umassAhmherst = 5.9;
+float safety_umassAmherst = 5.9;
 	//pRank
-float pRank_umassAhmherst = 76.0;
-float onlineS_umassAhmherst = 9.0;
+float pRank_umassAmherst = 76.0;
+float onlineS_umassAmherst = 9.0;
 	//Career Growth
-float milesFromCity_umassAhmherst = 25.2;
-float noncappenalty_umassAhmherst = 1.0;
-float prestigeValue_umassAhmherst = 3.0; //scale (0-3)
+float milesFromCity_umassAmherst = 25.2;
+float noncappenalty_umassAmherst = 1.0;
+float prestigeValue_umassAmherst = 3.0; //scale (0-3)
 	//acceptance
-float gpa_umassAhmherst = 3.0;
-float prereqVal_umassAhmherst = -1;
-float gradeprereq_umassAhmherst = -1;
+float gpa_umassAmherst = 3.0;
+float prereqVal_umassAmherst = -1;
+float gradeprereq_umassAmherst = -1;
 	//car 
-float easelocation_umassAhmherst = 7.5;
-float campusPark_umassAhmherst = 7.5;
-float costPark_umassAhmherst = 350.0;
+float easelocation_umassAmherst = 7.5;
+float campusPark_umassAmherst = 7.5;
+float costPark_umassAmherst = 350.0;
 
 
 //Umass Lowell------------------------------------------

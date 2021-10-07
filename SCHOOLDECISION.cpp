@@ -184,13 +184,13 @@ void processing(int menuChoice)
 	float saintAnselm_Acceptance_Value = acceptance(gpa_saintAnselm, prereqVal_saintAnselm, gradeprereq_saintAnselm);
 	float saintAnselm_Car_Value = car(easelocation_saintAnselm, campusPark_saintAnselm, costPark_saintAnselm);
 
-	//umassAhmherst
-	float umassAhmherst_Cost_Value = cost(creditcost_umassAhmherst, livingCost_umassAhmherst);
-	float umassAhmherst_Safety_Value = safety(safety_umassAhmherst);
-	float umassAhmherst_pRank_Value = pRank(pRank_umassAhmherst, onlineS_umassAhmherst);
-	float umassAhmherst_cGrowth_Value = cGrowth(milesFromCity_umassAhmherst, noncappenalty_umassAhmherst, prestigeValue_umassAhmherst);
-	float umassAhmherst_Acceptance_Value = acceptance(gpa_umassAhmherst, prereqVal_umassAhmherst, gradeprereq_umassAhmherst);
-	float umassAhmherst_Car_Value = car(easelocation_umassAhmherst, campusPark_umassAhmherst, costPark_umassAhmherst);
+	//umassAmherst
+	float umassAmherst_Cost_Value = cost(creditcost_umassAmherst, livingCost_umassAmherst);
+	float umassAmherst_Safety_Value = safety(safety_umassAmherst);
+	float umassAmherst_pRank_Value = pRank(pRank_umassAmherst, onlineS_umassAmherst);
+	float umassAmherst_cGrowth_Value = cGrowth(milesFromCity_umassAmherst, noncappenalty_umassAmherst, prestigeValue_umassAmherst);
+	float umassAmherst_Acceptance_Value = acceptance(gpa_umassAmherst, prereqVal_umassAmherst, gradeprereq_umassAmherst);
+	float umassAmherst_Car_Value = car(easelocation_umassAmherst, campusPark_umassAmherst, costPark_umassAmherst);
 
 	//umassLowell
 	float umassLowell_Cost_Value = cost(creditcost_umassLowell, livingCost_umassLowell);
@@ -246,7 +246,7 @@ void processing(int menuChoice)
 			std::cout << " 6. University Of New Hampshire\n\n";
 			std::cout << " 7. Southern New Hampshire University\n\n";
 			std::cout << " 8. Saint Anselm University\n\n";
-			std::cout << " 9. University of Massachusetts - Ahmherst\n\n";
+			std::cout << " 9. University of Massachusetts - Amherst\n\n";
 			std::cout << "10. University of Massachusetts - Lowell\n\n";
 			std::cout << "11. Florida Gulf Coast University\n\n";
 			std::cout << "12. View all scores at once";
@@ -290,8 +290,8 @@ void processing(int menuChoice)
 					saintAnselm_cGrowth_Value, saintAnselm_Acceptance_Value, saintAnselm_Car_Value);
 				break;
 			case 9:
-				printResults(schoolname_umassAhmherst, happiness_umassAhmherst, umassAhmherst_Cost_Value, umassAhmherst_Safety_Value, umassAhmherst_pRank_Value,
-					umassAhmherst_cGrowth_Value, umassAhmherst_Acceptance_Value, umassAhmherst_Car_Value);
+				printResults(schoolname_umassAmherst, happiness_umassAmherst, umassAmherst_Cost_Value, umassAmherst_Safety_Value, umassAmherst_pRank_Value,
+					umassAmherst_cGrowth_Value, umassAmherst_Acceptance_Value, umassAmherst_Car_Value);
 				break;
 			case 10:
 				printResults(schoolname_umassLowell, happiness_umassLowell, umassLowell_Cost_Value, umassLowell_Safety_Value, umassLowell_pRank_Value,
@@ -326,8 +326,8 @@ void processing(int menuChoice)
 				printResults(schoolname_saintAnselm, happiness_saintAnselm, saintAnselm_Cost_Value, saintAnselm_Safety_Value, saintAnselm_pRank_Value,
 					saintAnselm_cGrowth_Value, saintAnselm_Acceptance_Value, saintAnselm_Car_Value);
 
-				printResults(schoolname_umassAhmherst, happiness_umassAhmherst, umassAhmherst_Cost_Value, umassAhmherst_Safety_Value, umassAhmherst_pRank_Value,
-					umassAhmherst_cGrowth_Value, umassAhmherst_Acceptance_Value, umassAhmherst_Car_Value);
+				printResults(schoolname_umassAmherst, happiness_umassAmherst, umassAmherst_Cost_Value, umassAmherst_Safety_Value, umassAmherst_pRank_Value,
+					umassAmherst_cGrowth_Value, umassAmherst_Acceptance_Value, umassAmherst_Car_Value);
 
 				printResults(schoolname_umassLowell, happiness_umassLowell, umassLowell_Cost_Value, umassLowell_Safety_Value, umassLowell_pRank_Value,
 					umassLowell_cGrowth_Value, umassLowell_Acceptance_Value, umassLowell_Car_Value);
@@ -387,8 +387,8 @@ void processing(int menuChoice)
 		float UNH_FINAL = weightedCalculation(schoolname_UNH, happiness_UNH, UNH_Cost_Value, UNH_Safety_Value, UNH_pRank_Value,
 			UNH_cGrowth_Value, UNH_Acceptance_Value, UNH_Car_Value);
 
-		float umassAhmherst_FINAL = weightedCalculation(schoolname_umassAhmherst, happiness_umassAhmherst, umassAhmherst_Cost_Value, umassAhmherst_Safety_Value, umassAhmherst_pRank_Value,
-			umassAhmherst_cGrowth_Value, umassAhmherst_Acceptance_Value, umassAhmherst_Car_Value);
+		float umassAmherst_FINAL = weightedCalculation(schoolname_umassAmherst, happiness_umassAmherst, umassAmherst_Cost_Value, umassAmherst_Safety_Value, umassAmherst_pRank_Value,
+			umassAmherst_cGrowth_Value, umassAmherst_Acceptance_Value, umassAmherst_Car_Value);
 
 		float umassLowell_FINAL = weightedCalculation(schoolname_umassLowell, happiness_umassLowell, umassLowell_Cost_Value, umassLowell_Safety_Value, umassLowell_pRank_Value,
 			umassLowell_cGrowth_Value, umassLowell_Acceptance_Value, umassLowell_Car_Value);
@@ -412,7 +412,7 @@ void processing(int menuChoice)
 		sorted_map.insert(std::make_pair(merrimack_FINAL, schoolname_merrimack));
 		sorted_map.insert(std::make_pair(wentworth_FINAL, schoolname_wentworth));
 		sorted_map.insert(std::make_pair(UNH_FINAL, schoolname_UNH));
-		sorted_map.insert(std::make_pair(umassAhmherst_FINAL, schoolname_umassAhmherst));
+		sorted_map.insert(std::make_pair(umassAmherst_FINAL, schoolname_umassAmherst));
 		sorted_map.insert(std::make_pair(umassLowell_FINAL, schoolname_umassLowell));
 		sorted_map.insert(std::make_pair(SNHU_FINAL, schoolname_SNHU));
 		sorted_map.insert(std::make_pair(saintAnselm_FINAL, schoolname_saintAnselm));
