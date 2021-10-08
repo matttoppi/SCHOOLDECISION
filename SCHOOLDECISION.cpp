@@ -239,7 +239,26 @@ void processing(int menuChoice)
 	//main menu printing
 	if (menuChoice == 1)			//View algorithm Mechanics
 	{
-		ShellExecute(NULL, NULL, L"https://www.google.com/", NULL, NULL, SW_SHOWNORMAL);
+
+		int documentationMenuChoice;
+		std::cout << "What would you like to view?\n\n";
+		std::cout << "1. Metric Algorithm Procedures and Documentation\n2. Project GitHub page\n3. I'm using Apple Device\n - ";
+		std::cin >> documentationMenuChoice;
+		if (documentationMenuChoice == 1)
+		{
+			ShellExecute(NULL, NULL, L"https://docs.google.com/presentation/d/1dj604sGHW6FK3jxD-3WMaiZy3XWaGLN6s-rI9-H0zl4/edit?usp=sharing", NULL, NULL, SW_SHOWNORMAL);
+		}
+		else if(documentationMenuChoice == 2)
+		{
+			ShellExecute(NULL, NULL, L"https://github.com/matttoppi/SCHOOLDECISION", NULL, NULL, SW_SHOWNORMAL);
+		}
+		else 
+		{
+			std::cout << "Copy below links into your web browser\n\nDocumentation and Procedures: https://docs.google.com/presentation/d/1dj604sGHW6FK3jxD-3WMaiZy3XWaGLN6s-rI9-H0zl4/edit?usp=sharing \n\nGitHub Page: https://github.com/matttoppi/SCHOOLDECISION ";
+		}
+
+
+		
 		char anotherOption;
 		std::cout << "\n\nWould you like to select another main menu option? (Y or N)";
 		std::cin >> anotherOption;
