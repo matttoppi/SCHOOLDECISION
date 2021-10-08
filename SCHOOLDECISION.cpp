@@ -6,7 +6,7 @@
 //functions prototyping
 void processing(int menuChoice);
 float cost(float creditCost, float livingCostMonth);
-float safety(float preSafeValue);
+float safety(float crimes, float students, float crimeindex);
 float pRank(float pRank, float onlineSentiment);
 float cGrowth(float milesFromCity, float nonCapPenalty, float prestigeValue);
 float acceptance(float gpa, float preReqValue, float gradePreReq);
@@ -35,10 +35,27 @@ float cost(float creditCost, float livingCostMonth)
 	return value;
 }
 
-float safety(float preSafeValue)
+float safety(float crimes, float students, float crimeindex)
 {
-	//calculation of the safety value
-	float value = (preSafeValue * 2.0) - 10.0;
+	float studentToCrime; 
+	float StCValue;
+	float crimeIndexValue;
+	float value;
+
+	//calculation of the student to crime ratio and converting that value into a 0-10 scale
+	studentToCrime = students / crimes;
+	StCValue = (studentToCrime - 50) / 45;
+
+	if (StCValue > 10.0)
+	{
+		StCValue = 10.0;
+	}
+
+	//converting crime index into a 0-10 scale
+	crimeIndexValue = (crimeindex - 15) / 6;
+
+	value = (crimeIndexValue + StCValue) / 2;
+
 	return value;
 }
 
@@ -112,7 +129,7 @@ void printResults(std::string& school_name, float& fhappinessValue, float& fCost
 {
 	//printing of the various values
 	std::cout << std::fixed;
-	std::cout << std::setprecision(2) << std::endl;
+	std::cout << std::setprecision(2) << std::endl<<std::endl;
 	std::cout << school_name<< ":\n\n";
 	std::cout << fhappinessValue << " - Happiness \n";
 	std::cout << fCost_Value << " - Cost \n";
@@ -130,7 +147,7 @@ void processing(int menuChoice)
 	//call to functions for each school
 	//Wentworth
 	float wentworth_Cost_Value = cost(creditcost_wentworth, livingCost_wentworth);
-	float wentworth_Safety_Value = safety(safety_wentworth);
+	float wentworth_Safety_Value = safety(crimes_wentworth, students_wentworth, crimeIndex_wentworth);
 	float wentworth_pRank_Value = pRank(pRank_wentworth, onlineS_wentworth);
 	float wentworth_cGrowth_Value = cGrowth(milesFromCity_wentworth, noncappenalty_wentworth, prestigeValue_wentworth);
 	float wentworth_Acceptance_Value = acceptance(gpa_wentworth, prereqVal_wentworth, gradeprereq_wentworth);
@@ -138,7 +155,7 @@ void processing(int menuChoice)
 
 	//umassBoston
 	float umassBoston_Cost_Value = cost(creditcost_umassBoston, livingCost_umassBoston);
-	float umassBoston_Safety_Value = safety(safety_umassBoston);
+	float umassBoston_Safety_Value = safety(crimes_umassBoston, students_umassBoston, crimeIndex_umassBoston);
 	float umassBoston_pRank_Value = pRank(pRank_umassBoston, onlineS_umassBoston);
 	float umassBoston_cGrowth_Value = cGrowth(milesFromCity_umassBoston, noncappenalty_umassBoston, prestigeValue_umassBoston);
 	float umassBoston_Acceptance_Value = acceptance(gpa_umassBoston, prereqVal_umassBoston, gradeprereq_umassBoston);
@@ -146,7 +163,7 @@ void processing(int menuChoice)
 
 	//merrimack
 	float merrimack_Cost_Value = cost(creditcost_merrimack, livingCost_merrimack);
-	float merrimack_Safety_Value = safety(safety_merrimack);
+	float merrimack_Safety_Value = safety(crimes_merrimack, students_merrimack, crimeIndex_merrimack);
 	float merrimack_pRank_Value = pRank(pRank_merrimack, onlineS_merrimack);
 	float merrimack_cGrowth_Value = cGrowth(milesFromCity_merrimack, noncappenalty_merrimack, prestigeValue_merrimack);
 	float merrimack_Acceptance_Value = acceptance(gpa_merrimack, prereqVal_merrimack, gradeprereq_merrimack);
@@ -154,7 +171,7 @@ void processing(int menuChoice)
 
 	//suffolk
 	float suffolk_Cost_Value = cost(creditcost_suffolk, livingCost_suffolk);
-	float suffolk_Safety_Value = safety(safety_suffolk);
+	float suffolk_Safety_Value = safety(crimes_suffolk, students_suffolk, crimeIndex_suffolk);
 	float suffolk_pRank_Value = pRank(pRank_suffolk, onlineS_suffolk);
 	float suffolk_cGrowth_Value = cGrowth(milesFromCity_suffolk, noncappenalty_suffolk, prestigeValue_suffolk);
 	float suffolk_Acceptance_Value = acceptance(gpa_suffolk, prereqVal_suffolk, gradeprereq_suffolk);
@@ -162,7 +179,7 @@ void processing(int menuChoice)
 
 	//fitchburg
 	float fitchburg_Cost_Value = cost(creditcost_fitchburg, livingCost_fitchburg);
-	float fitchburg_Safety_Value = safety(safety_fitchburg);
+	float fitchburg_Safety_Value = safety(crimes_fitchburg, students_fitchburg, crimeIndex_fitchburg);
 	float fitchburg_pRank_Value = pRank(pRank_fitchburg, onlineS_fitchburg);
 	float fitchburg_cGrowth_Value = cGrowth(milesFromCity_fitchburg, noncappenalty_fitchburg, prestigeValue_fitchburg);
 	float fitchburg_Acceptance_Value = acceptance(gpa_fitchburg, prereqVal_fitchburg, gradeprereq_fitchburg);
@@ -170,7 +187,7 @@ void processing(int menuChoice)
 
 	//SNHU
 	float SNHU_Cost_Value = cost(creditcost_SNHU, livingCost_SNHU);
-	float SNHU_Safety_Value = safety(safety_SNHU);
+	float SNHU_Safety_Value = safety(crimes_SNHU, students_SNHU, crimeIndex_SNHU);
 	float SNHU_pRank_Value = pRank(pRank_SNHU, onlineS_SNHU);
 	float SNHU_cGrowth_Value = cGrowth(milesFromCity_SNHU, noncappenalty_SNHU, prestigeValue_SNHU);
 	float SNHU_Acceptance_Value = acceptance(gpa_SNHU, prereqVal_SNHU, gradeprereq_SNHU);
@@ -178,7 +195,7 @@ void processing(int menuChoice)
 
 	//UNH
 	float UNH_Cost_Value = cost(creditcost_UNH, livingCost_UNH);
-	float UNH_Safety_Value = safety(safety_UNH);
+	float UNH_Safety_Value = safety(crimes_UNH, students_UNH, crimeIndex_UNH);
 	float UNH_pRank_Value = pRank(pRank_UNH, onlineS_UNH);
 	float UNH_cGrowth_Value = cGrowth(milesFromCity_UNH, noncappenalty_UNH, prestigeValue_UNH);
 	float UNH_Acceptance_Value = acceptance(gpa_UNH, prereqVal_UNH, gradeprereq_UNH);
@@ -186,7 +203,7 @@ void processing(int menuChoice)
 
 	//saintAnselm
 	float saintAnselm_Cost_Value = cost(creditcost_saintAnselm, livingCost_saintAnselm);
-	float saintAnselm_Safety_Value = safety(safety_saintAnselm);
+	float saintAnselm_Safety_Value = safety(crimes_saintAnselm, students_saintAnselm, crimeIndex_saintAnselm);
 	float saintAnselm_pRank_Value = pRank(pRank_saintAnselm, onlineS_saintAnselm);
 	float saintAnselm_cGrowth_Value = cGrowth(milesFromCity_saintAnselm, noncappenalty_saintAnselm, prestigeValue_saintAnselm);
 	float saintAnselm_Acceptance_Value = acceptance(gpa_saintAnselm, prereqVal_saintAnselm, gradeprereq_saintAnselm);
@@ -194,7 +211,7 @@ void processing(int menuChoice)
 
 	//umassAmherst
 	float umassAmherst_Cost_Value = cost(creditcost_umassAmherst, livingCost_umassAmherst);
-	float umassAmherst_Safety_Value = safety(safety_umassAmherst);
+	float umassAmherst_Safety_Value = safety(crimes_umassAmherst, students_umassAmherst, crimeIndex_umassAmherst);
 	float umassAmherst_pRank_Value = pRank(pRank_umassAmherst, onlineS_umassAmherst);
 	float umassAmherst_cGrowth_Value = cGrowth(milesFromCity_umassAmherst, noncappenalty_umassAmherst, prestigeValue_umassAmherst);
 	float umassAmherst_Acceptance_Value = acceptance(gpa_umassAmherst, prereqVal_umassAmherst, gradeprereq_umassAmherst);
@@ -202,7 +219,7 @@ void processing(int menuChoice)
 
 	//umassLowell
 	float umassLowell_Cost_Value = cost(creditcost_umassLowell, livingCost_umassLowell);
-	float umassLowell_Safety_Value = safety(safety_umassLowell);
+	float umassLowell_Safety_Value = safety(crimes_umassLowell, students_umassLowell, crimeIndex_umassLowell);
 	float umassLowell_pRank_Value = pRank(pRank_umassLowell, onlineS_umassLowell);
 	float umassLowell_cGrowth_Value = cGrowth(milesFromCity_umassLowell, noncappenalty_umassLowell, prestigeValue_umassLowell);
 	float umassLowell_Acceptance_Value = acceptance(gpa_umassLowell, prereqVal_umassLowell, gradeprereq_umassLowell);
@@ -210,7 +227,7 @@ void processing(int menuChoice)
 
 	//FGCU
 	float FGCU_Cost_Value = cost(creditcost_FGCU, livingCost_FGCU);
-	float FGCU_Safety_Value = safety(safety_FGCU);
+	float FGCU_Safety_Value = safety(crimes_FGCU, students_FGCU, crimeIndex_FGCU);
 	float FGCU_pRank_Value = pRank(pRank_FGCU, onlineS_FGCU);
 	float FGCU_cGrowth_Value = cGrowth(milesFromCity_FGCU, noncappenalty_FGCU, prestigeValue_FGCU);
 	float FGCU_Acceptance_Value = acceptance(gpa_FGCU, prereqVal_FGCU, gradeprereq_FGCU);
@@ -348,7 +365,7 @@ void processing(int menuChoice)
 
 
 			char moreScores;
-			std::cout << "\n\nWould you like to view more school specific scores?";
+			std::cout << "\n\nWould you like to view more school specific scores? (Y or N) - ";
 			std::cin >> moreScores;
 
 			if (moreScores == 'N' || moreScores == 'n') {

@@ -25,7 +25,9 @@ float happiness_wentworth = 6.2;
 float creditcost_wentworth = 1160.0;
 float livingCost_wentworth = 1600.0;
 	//safety
-float safety_wentworth = 7.8;
+float crimes_wentworth = 23.0;
+float students_wentworth = 4449.0;
+float crimeIndex_wentworth = 19.0;
 	//pRank
 float pRank_wentworth = 44.0;
 float onlineS_wentworth = 8.3;
@@ -52,7 +54,9 @@ float happiness_umassBoston = 3.6;
 float creditcost_umassBoston = 500.0;
 float livingCost_umassBoston = 1600.0;
 	//safety
-float safety_umassBoston = 7.8;
+float crimes_umassBoston = 9.0;
+float students_umassBoston = 15989.0;
+float crimeIndex_umassBoston = 19.0;
 	//pRank
 float pRank_umassBoston = 113.0;
 float onlineS_umassBoston = 6.7;
@@ -78,7 +82,9 @@ float happiness_merrimack = 0.8;
 float creditcost_merrimack = 1500.0;
 float livingCost_merrimack = 900.0;
 	//safety
-float safety_merrimack = 8.1;
+float crimes_merrimack = 44.0;
+float students_merrimack = 5186.0;
+float crimeIndex_merrimack = 75.0;
 	//pRank
 float pRank_merrimack = 1347.0;
 float onlineS_merrimack = 3.6;
@@ -104,7 +110,9 @@ float happiness_suffolk = 2.2;
 float creditcost_suffolk = 1213.0;
 float livingCost_suffolk = 1600.0;
 	//safety
-float safety_suffolk = 7.8;
+float crimes_suffolk = 20.0;
+float students_suffolk = 7169.0;
+float crimeIndex_suffolk = 19;
 	//pRank
 float pRank_suffolk = 371;
 float onlineS_suffolk = 6.0;
@@ -130,7 +138,9 @@ float happiness_fitchburg = 4.0;
 float creditcost_fitchburg = 40.0;
 float livingCost_fitchburg = 750.0;
 	//safety
-float safety_fitchburg = 6.1;
+float crimes_fitchburg = 31.0;
+float students_fitchburg = 7251.0;
+float crimeIndex_fitchburg = 31.0;
 	//pRank
 float pRank_fitchburg = 584.0;
 float onlineS_fitchburg = 6.0;
@@ -157,7 +167,9 @@ float happiness_SNHU = 2.0;
 float creditcost_SNHU = 320.0;
 float livingCost_SNHU = 900.0;
 	//safety
-float safety_SNHU = 8.1;
+float crimes_SNHU = 21.0;
+float students_SNHU = 3000.0;
+float crimeIndex_SNHU = 15.0;
 	//pRank
 float pRank_SNHU = 339.0;
 float onlineS_SNHU = 6.3;
@@ -183,7 +195,9 @@ float happiness_UNH = 7.0;
 float creditcost_UNH = 1405.0;
 float livingCost_UNH = 800.0;
 	//safety
-float safety_UNH = 8.1;
+float crimes_UNH = 121.0;
+float students_UNH = 14788.0;
+float crimeIndex_UNH = 58.0;
 	//pRank
 float pRank_UNH = 82.0;
 float onlineS_UNH = 7.2;
@@ -209,7 +223,9 @@ float happiness_saintAnselm = 2.0;
 float creditcost_saintAnselm = 1000.0;
 float livingCost_saintAnselm = 900.0;
 	//safety
-float safety_saintAnselm = 6.3;
+float crimes_saintAnselm = 40.0;
+float students_saintAnselm = 2033.0;
+float crimeIndex_saintAnselm = 15.0;
 	//pRank
 float pRank_saintAnselm = 1383.0;
 float onlineS_saintAnselm = 7.3;
@@ -235,7 +251,9 @@ float happiness_umassAmherst = 5.4;
 float creditcost_umassAmherst = 405.0;
 float livingCost_umassAmherst = 1050.0;
 	//safety
-float safety_umassAmherst = 5.9;
+float crimes_umassAmherst = 93.0;
+float students_umassAmherst = 31350.0;
+float crimeIndex_umassAmherst = 55.0;
 	//pRank
 float pRank_umassAmherst = 76.0;
 float onlineS_umassAmherst = 9.0;
@@ -261,7 +279,9 @@ float happiness_umassLowell = 5.5;
 float creditcost_umassLowell = 340.0;
 float livingCost_umassLowell = 800.0;
 	//safety
-float safety_umassLowell = 6.5;
+float crimes_umassLowell = 29.0;
+float students_umassLowell = 18352.0;
+float crimeIndex_umassLowell = 31.0;
 	//pRank
 float pRank_umassLowell = 87.0;
 float onlineS_umassLowell = 8.5;
@@ -287,7 +307,9 @@ float happiness_FGCU = 2.0;
 float creditcost_FGCU = 838.73;
 float livingCost_FGCU = 800.0;
 	//safety
-float safety_FGCU = 8.5;
+float crimes_FGCU = 8.0;
+float students_FGCU = 14977.0;
+float crimeIndex_FGCU = 16.0;
 	//pRank
 float pRank_FGCU = 772.0;
 float onlineS_FGCU = 7.8;
