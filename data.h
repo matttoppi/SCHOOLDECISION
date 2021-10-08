@@ -18,7 +18,7 @@
 
 
 //wentworth------------------------------------------
- std::string schoolname_wentworth = "Wentworth Insitute of Technology";
+ std::string schoolname_wentworth = "Wentworth Institute of Technology";
 	//happiness
 float happiness_wentworth = 6.2;
 	//cost
