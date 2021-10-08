@@ -110,9 +110,9 @@ float weightedCalculation(std::string school_name, float fhappinessValue, float 
 	float happinessV, costV, safetyV, prankV, cgrowthV, acceptanceV, carV;
 
 	happinessV = fhappinessValue * (.25);
-	costV = fCost_Value * (.25);
+	costV = fCost_Value * (.20);
 	safetyV = fSafety_Value * (.10);
-	prankV = fpRank_Value * (.25);
+	prankV = fpRank_Value * (.30);
 	cgrowthV = fcGrwoth_Value * (.05);
 	acceptanceV = facceptance_Value * (.05);
 	carV = fcar_Value * (.05);
