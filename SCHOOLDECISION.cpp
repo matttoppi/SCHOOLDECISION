@@ -18,7 +18,7 @@ int main()
 
 
 	int mainMenuChoice;
-	std::cout << "School Decision Algorithm\n\n";
+	std::cout << "School Decision Metric\n\n";
 	std::cout << "Please select an option:\n--------------------------------------";
 	std::cout << "\n1. View algorithms mechanics\n2. Detailed view of category scores\n3. View final scoring\n\n";
 	std::cin >> mainMenuChoice;
@@ -111,8 +111,8 @@ float weightedCalculation(std::string school_name, float fhappinessValue, float 
 
 	happinessV = fhappinessValue * (.25);
 	costV = fCost_Value * (.25);
-	safetyV = fSafety_Value * (.15);
-	prankV = fpRank_Value * (.20);
+	safetyV = fSafety_Value * (.10);
+	prankV = fpRank_Value * (.25);
 	cgrowthV = fcGrwoth_Value * (.05);
 	acceptanceV = facceptance_Value * (.05);
 	carV = fcar_Value * (.05);
